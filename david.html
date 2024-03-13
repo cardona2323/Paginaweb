@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos Profesional</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #080808;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: left;
+            margin-bottom: 100px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="head">
+
+        <div class="logo">
+            <a href="index.html"></a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="david.html">Proyectos</a>
+            <a href="https://api.whatsapp.com/send?phone=573117596134">Contacto</a>
+        </nav>
+
+    </div>
+
+<div class="container">
+    <h1 style="color: #fff; font-size: 50px;"></h1>
+
+    <div class="gallery">
+        <img src="rp2/baño enchapado.jpg" alt="Imagen 1" onclick="openModal('amg/baño enchapado.jpg')">
+        <img src="rp2/casa construccion.jpg" alt="Imagen 2" onclick="openModal('amg/casa construccion.jpg')">
+        <img src="rp2/iluminacion.jpg" alt="Imagen 3" onclick="openModal('amg/iluminacion.jpg')">
+        <img src="rp2/plomeria.jpg" alt="Imagen 4" onclick="openModal ('amg/plomeria.jpg')">
+        <img src="rp2/techo termoacustico(1).jpg" alt="Imagen 5" onclick="openModal ('amg/techo termoacustico.webp')">
+        <img src="rp2/cielo-raso(1).jpg" alt="Imagen 6" onclick="openModal ('amg/cielo raso.avif')">
+        <img src="rp2/soldar.jpg" alt="Imagen 7" onclick="openModal ('amg/soldar.jpg')">
+        <img src="rp2/image(1).jpg" alt="Imagen 7" onclick="openModal ('amg/image.png')">
+        <!-- Agrega más imágenes aquí -->
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+</div>
+
+<script>
+    function openModal(image) {
+        document.getElementById('myModal').style.display = 'block';
+        document.getElementById('modalImg').src = image;
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

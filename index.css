@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background: #171717;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  margin-right: 20px;
+}
+
+.logo {
+  margin-left: 0px;
+  background-image: url(img/harmony\ 2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 900px;
+  
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.navbar a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #3f3f3f;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
